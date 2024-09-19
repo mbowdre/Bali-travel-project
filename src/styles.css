@@ -8,6 +8,11 @@ body {
   margin: 0 auto;
 }
 
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+}
+
 header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2)),
     url("../images/bali-beach.jpg");
@@ -49,7 +54,42 @@ header a {
   text-decoration: none;
   margin-top: 32px;
 }
-@media (max-width: 800px) {
+section {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+footer {
+  color: white;
+  background-image: linear-gradient(
+      rgba(39, 32, 68, 0.8),
+      rgba(39, 32, 68, 0.8)
+    ),
+    url("../images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px;
+}
+
+footer h3 {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+}
+footer p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+footer li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+footer a {
+  color: white;
+  opacity: 0.7;
+}
+@media (max-width: 960px) {
   header {
     padding: 60px 0;
   }
@@ -61,5 +101,10 @@ header a {
   }
   header h3 {
     font-size: 12px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0;
   }
 }
